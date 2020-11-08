@@ -1,6 +1,6 @@
 {
   "presets": [
-  	"@babel/react"
+  	"@babel/preset-typescript", "@babel/react"
   ],
   "plugins": [
   	"@babel/plugin-proposal-object-rest-spread",

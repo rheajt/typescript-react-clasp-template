@@ -1,7 +1,7 @@
 import React from 'react';
 
 const About = () => (
-    <div>
+    <article>
         <p>
             <b>☀️ React app inside a sidebar! ☀️</b>
         </p>
@@ -21,7 +21,7 @@ const About = () => (
         >
             React + Google Apps Script
         </a>
-    </div>
+    </article>
 );
 
 export default About;

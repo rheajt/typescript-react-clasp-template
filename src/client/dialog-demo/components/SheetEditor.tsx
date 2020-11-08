@@ -19,14 +19,14 @@ const SheetEditor = () => {
             .catch(alert);
     }, []);
 
-    const deleteSheet = sheetIndex => {
+    const deleteSheet = (sheetIndex: number) => {
         serverFunctions
             .deleteSheet(sheetIndex)
             .then(setNames)
             .catch(alert);
     };
 
-    const setActiveSheet = sheetName => {
+    const setActiveSheet = (sheetName: string) => {
         serverFunctions
             .setActiveSheet(sheetName)
             .then(setNames)

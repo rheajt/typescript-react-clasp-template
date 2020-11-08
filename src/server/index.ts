@@ -8,7 +8,6 @@ declare var global: any;
 // Expose public functions by attaching to `global`
 global.onOpen = publicUiFunctions.onOpen;
 global.openDialog = publicUiFunctions.openDialog;
-global.openDialogBootstrap = publicUiFunctions.openDialogBootstrap;
 global.openAboutSidebar = publicUiFunctions.openAboutSidebar;
 global.getSheetsData = publicSheetFunctions.getSheetsData;
 global.addSheet = publicSheetFunctions.addSheet;

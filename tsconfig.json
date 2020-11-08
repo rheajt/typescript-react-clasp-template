@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    "lib": ["ESNext", "ESNext.Promise", "DOM"],
+    "target": "ESNext",
     "types": ["gas-types-detailed"],
     "jsx": "react",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "Node"
   }
 }
