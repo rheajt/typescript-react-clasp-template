@@ -39,7 +39,7 @@ const serverEntry = './src/server/index.ts';
 const copyAppscriptEntry = './appsscript.json';
 
 // define live development dialog paths
-const devDialogEntry = './dev/index.ts';
+const devDialogEntry = './dev/index.js';
 
 // define client entry points and output names
 const clientEntrypoints = [
@@ -114,18 +114,18 @@ const clientConfig = {
                     {
                         loader: 'babel-loader',
                     },
-                    //                    {
-                    //                        loader: 'ts-loader',
-                    //                    },
+                    {
+                        loader: 'ts-loader',
+                    },
                 ],
             },
-            //            {
-            //                test: /\.jsx?$/,
-            //                exclude: /node_modules/,
-            //                use: {
-            //                    loader: 'babel-loader',
-            //                },
-            //            },
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                },
+            },
             // we could add support for scss here
             {
                 test: /\.s[ac]ss$/i,
