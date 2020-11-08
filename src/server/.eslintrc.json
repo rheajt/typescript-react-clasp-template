@@ -11,6 +11,7 @@
     "camelcase": "warn",
     "import/prefer-default-export": "warn",
     "import/no-extraneous-dependencies": "warn",
+    "import/extensions": "off",
     "prefer-object-spread": "warn"
   },
   "settings": {
