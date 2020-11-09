@@ -4,25 +4,26 @@ import server from '../src/client/utils/server';
 
 const { serverFunctions } = server;
 
+// @ts-ignore
 const { FILENAME, PORT } = process.env;
 
 const DevServer = () => {
     const iframe = React.useRef(null);
     useEffect(() => {
-        const handleRequest = event => {
+        const handleRequest = (event: MessageEvent) => {
             const request = event.data;
             const { type, functionName, id, args } = request;
 
             if (type !== 'REQUEST') return;
 
             serverFunctions[functionName](...args)
-                .then(response => {
+                .then((response: any) => {
                     iframe.current.contentWindow.postMessage(
                         { type: 'RESPONSE', id, status: 'SUCCESS', response },
                         `https://localhost:${PORT}`
                     );
                 })
-                .catch(err => {
+                .catch((err: Error) => {
                     iframe.current.contentWindow.postMessage(
                         {
                             type: 'RESPONSE',
