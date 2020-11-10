@@ -324,7 +324,11 @@ const serverConfig = {
                 isProd ? 'production' : 'development'
             ),
         }),
-        new GasPlugin(),
+        new GasPlugin({
+            comment: false,
+            source: '@OnlyCurrentDoc',
+            autoGlobalExportsFiles: ['*.ts'],
+        }),
     ],
 };
 

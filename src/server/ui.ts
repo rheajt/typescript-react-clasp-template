@@ -2,9 +2,14 @@ export const onOpen = () => {
     const menu = SpreadsheetApp.getUi()
         .createMenu('DEMO') // edit me!
         .addItem('Sheet Editor', 'openDialog')
+        .addItem('Temp', 'temp')
         .addItem('About me', 'openAboutSidebar');
 
     menu.addToUi();
+};
+
+export const temp = () => {
+    SpreadsheetApp.getActive().toast('temp');
 };
 
 export const openDialog = () => {
